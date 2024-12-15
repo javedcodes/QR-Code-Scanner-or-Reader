@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- 
+  QR Code Scanner or Reader 
+  Coding By JV Codes - youtube.com/@jvcodes 
+-->
+<html lang="en" dir="ltr">
+<head>
+  <!-- Metadata Section -->
+  <meta charset="utf-8">  
+  <title>QR Code Scanner or Reader | JVCodes.Com</title>
+  
+  <!-- Link to External CSS -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Responsive Design: Ensures the page scales properly on all devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Font Awesome Icons for UI elements -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+  <!-- Wrapper for the entire content -->
+  <div class="wrapper">
+    <!-- Form to handle file input -->
+    <form action="#">
+      <!-- Hidden File Input for Uploading QR Code -->
+      <input type="file" hidden>
+      <!-- Placeholder for displaying the uploaded QR code -->
+      <img src="#" alt="qr-code">
+      <!-- Content Section for Upload Instructions -->
+      <div class="content">
+        <!-- Upload Icon -->
+        <i class="fas fa-cloud-upload"></i>
+        <p>Upload QR Code to Read</p>
+      </div>
+    </form>
+    <!-- Details Section -->
+    <div class="details">
+      <!-- Text Area to display QR code content -->
+      <textarea spellcheck="false" disabled></textarea>
+      <!-- Buttons for user actions -->
+      <div class="buttons">
+        <!-- Button to Close the details section -->
+        <button class="close">Close</button>
+        <!-- Button to Copy Text from the Text Area -->
+        <button class="copy">Copy Text</button>
+      </div>
+    </div>
+  </div>
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>

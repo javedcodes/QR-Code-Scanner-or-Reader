@@ -1,0 +1,166 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Global Reset and Font Family */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling: Center content with a flexible layout */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 10px;
+  background: #ffc477;
+}
+
+/* Wrapper Styling: Main container for the QR scanner */
+.wrapper {
+  height: 270px;
+  width: 420px;
+  border-radius: 7px;
+  background: #4CAF50;
+  padding: 30px 30px 35px;
+  transition: height 0.2s ease;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Wrapper Expanded State */
+.wrapper.active {
+  height: 525px;
+}
+
+/* Form Styling: Centered box for file upload */
+.wrapper form {
+  height: 210px;
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  border-radius: 7px;
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.2s ease;
+}
+
+/* Form Styling for Active State */
+.wrapper.active form {
+  height: 225px;
+  pointer-events: none;
+}
+
+/* Form Image Styling */
+form img {
+  display: none;
+  max-width: 148px;
+}
+
+.wrapper.active form img {
+  display: block;
+}
+
+/* Content inside Form */
+.wrapper.active form .content {
+  display: none;
+}
+
+/* Upload Icon Styling */
+form .content i {
+  color: #4CAF50;
+  font-size: 55px;
+}
+
+/* Upload Text Styling */
+form .content p {
+  color: #4CAF50;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+/* Details Section: Initially Hidden */
+.wrapper .details {
+  opacity: 0;
+  margin-top: 25px;
+  pointer-events: none;
+}
+
+/* Details Section: Shown in Active State */
+.wrapper.active .details {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
+
+/* Text Area Styling */
+.details textarea {
+  width: 100%;
+  height: 128px;
+  outline: none;
+  resize: none;
+  color: #fff;
+  font-size: 18px;
+  background: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  border: 2px solid #333;
+}
+
+/* Scrollbar Styling */
+textarea::-webkit-scrollbar {
+  width: 0px;
+}
+textarea:hover::-webkit-scrollbar {
+  width: 5px;
+}
+textarea:hover::-webkit-scrollbar-track {
+  background: none;
+}
+textarea:hover::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 8px;
+}
+
+/* Buttons Container */
+.details .buttons {
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Buttons Styling */
+.buttons button {
+  height: 55px;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  color: #4CAF50;
+  border-radius: 5px;
+  background: #fff;
+  transition: transform 0.3s ease;
+  width: calc(100% / 2 - 10px);
+}
+
+/* Button Press Animation */
+.buttons button:active {
+  transform: scale(0.95);
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 450px) {
+  .wrapper {
+    padding: 25px;
+    height: 260px;
+  }
+  .wrapper.active {
+    height: 520px;
+  }
+}
